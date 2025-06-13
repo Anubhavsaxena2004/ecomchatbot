@@ -1,0 +1,16 @@
+Django==4.2.7
+djangorestframework==3.14.0
+django-filter==23.3
+django-cors-headers==4.3.0
+mysqlclient==2.2.0
+Pillow==10.1.0
+python-dotenv==1.0.0
+Faker==19.13.0
+django-crispy-forms==2.0
+crispy-bootstrap5==0.7
+django-allauth==0.57.0
+django-redis==5.4.0
+django-cacheops==6.0.1
+django-debug-toolbar==4.2.0
+gunicorn==21.2.0
+whitenoise==6.5.0 
