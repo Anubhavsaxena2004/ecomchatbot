@@ -19,12 +19,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('chatbot.urls')),
-    path('api/', include('products.urls')),
-    path('auth/', include('authentication.urls')),
-]
+urlpatterns = [path('', include('chatbot.urls'), name='chatbot-home'),
+path('chat/', include('chatbot.urls'), name='chat'),
+path('auth/login/', include('authentication.urls'), name='login'),
+path('auth/register/', include('authentication.urls'), name='register'),
+path('auth/profile/', include('authentication.urls'), name='profile'),]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

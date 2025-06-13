@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static "images/hero-bg.jpg" %}');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .feature-card {
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 mb-4">Smart Shopping Assistant</h1>
+            <p class="lead mb-4">Your AI-powered shopping companion helps you find products, compare prices, and make smart decisions</p>
+            <a href="{% url 'chat' %}" class="btn btn-primary btn-lg px-5 py-3">Start Chatting</a>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row text-center mb-5">
+            <div class="col">
+                <h2>How It Works</h2>
+                <p class="text-muted">Simple steps to smarter shopping</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-primary text-white rounded-circle p-3 d-inline-block mb-3">
+                            <i class="bi bi-chat-dots fs-1"></i>
+                        </div>
+                        <h3>Ask Questions</h3>
+                        <p>Describe what you're looking for in natural language</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-success text-white rounded-circle p-3 d-inline-block mb-3">
+                            <i class="bi bi-search fs-1"></i>
+                        </div>
+                        <h3>Get Recommendations</h3>
+                        <p>Receive personalized product suggestions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-info text-white rounded-circle p-3 d-inline-block mb-3">
+                            <i class="bi bi-cart-check fs-1"></i>
+                        </div>
+                        <h3>Manage Cart</h3>
+                        <p>Add to cart, view items, and checkout seamlessly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>E-commerce Chatbot</h5>
+                    <p>Your AI shopping assistant 24/7</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>&copy; 2023 E-commerce Chatbot. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
